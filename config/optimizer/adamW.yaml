@@ -1,7 +1,7 @@
 # @package _global_
 optimizer:
   _target_: torch.optim.AdamW  # Change Adam to AdamW
-  lr: 1e-5
+  lr: 1e-3
   weight_decay: 5e-4 
 
 
