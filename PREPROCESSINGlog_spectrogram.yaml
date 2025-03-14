@@ -39,6 +39,16 @@ time_warp:
   max_warp: 0.15
 
 
+elecsub:
+  _target_: emg2qwerty.transforms.ElectrodeSubset
+  channels_per_band: 8
+  mode: random
+
+resample:
+  _target_: emg2qwerty.transforms.ResampleEMG
+  orig_rate: 2000
+  new_rate: 1000
+
 transforms:
   train:
     - ${emg_noise}
